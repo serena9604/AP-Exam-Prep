@@ -1,0 +1,27 @@
+Question 1
+
+Part A
+
+public void replaceNthOccurrence(String str, int n, String repl); {
+String a = this.toString();
+String front = "";
+String back = "";
+String both = "";
+int index = this.findNthOccurrence(String str, int n);
+int l = str.length();
+front = a.substring(0, index);
+back = a.substring(index + length);
+both = front + back;
+this.phrase() = new Phrase(both);
+}
+
+Part B
+public int findLastOccurrence(String str) {
+int index = -1;
+int i = 1;
+while (this.findNthOccurrence(String str, int i) != - 1) {
+index = this.findNthOccurrence(String str, int i);
+i ++;
+}
+return index;
+}

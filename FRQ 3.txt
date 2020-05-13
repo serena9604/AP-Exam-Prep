@@ -1,0 +1,104 @@
+FRQ 3
+
+Question 1
+
+Part A
+
+for (int i = 0; i < downloadList.size(); i ++) {
+
+if (title.equals(downloadList.get(i).getTitle())) return downloadList.get(i).getTitle();
+
+}
+
+return null;
+
+
+Part B
+
+for (int i = 0; i < titles.size(); i ++) {
+
+if (this.getDownloadInfo(titles.get(i)) == null) {
+
+downloadList.add(downLoadInfo( titles.get(i) ) );
+
+}
+
+else {
+
+this.getDownloadInfo(titles.get(i)).incrementTimesDownloaded();
+
+}
+
+}
+
+
+Question 2
+
+Part A
+
+board = new int[playerCount];
+
+for (int i = 0; i < board.length; i ++) {
+
+int a = (int) (Math.random()*10 + 1);
+
+board[i] = a;
+
+currentPlayer = (int) (Math.random()*playerCount);
+
+}
+
+Part B
+
+b = board[currentPlayer];
+
+if (b <= 1) {
+
+int i = 0;
+
+int j = 0;
+
+while (i < b) {
+
+board[j] += 1;
+
+j ++;
+
+b++;
+
+if (j == board.length) j = 0;
+
+}
+
+}
+
+
+
+
+int t = board[currentPlayer]; //tokens to distribute
+
+int cp = currentPlayer;
+
+board[currentPlayer] = 0;
+
+for(int i = t; i > 0; i --) {
+
+if (cp == board.length) cp = 0;
+
+else cp ++;
+
+board[cp] += 1;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
